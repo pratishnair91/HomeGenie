@@ -14,7 +14,7 @@ using Newtonsoft.Json.Linq;
 
 namespace HomeGenie.UI
 {
-    [Activity(Label = "SecondActivity")]
+    [Activity(Label = "Choose your option")]
     public class SecondActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -24,18 +24,19 @@ namespace HomeGenie.UI
             // Create your application here
             SetContentView(Resource.Layout.SecondLayout);
             Button videoStream = FindViewById<Button>(Resource.Id.allow);
-            Button callAzure = FindViewById<Button>(Resource.Id.deny);
-            callAzure.Click += CallAzure_Click;
-            videoStream.Click += VideoStream_Click;
-        }
-
-        private void CallAzure_Click(object sender, EventArgs e)
-        {
-            WebApiClient client = new WebApiClient();
-            client.Init("application/json", "GET");
            
+            videoStream.Click += VideoStream_Click;
 
+            Button videoView = FindViewById<Button>(Resource.Id.video);
+            videoView.Click += VideoView_Click;
         }
+
+        private void VideoView_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(VideoActivity));
+        }
+
+       
 
         private void VideoStream_Click(object sender, EventArgs e)
         {

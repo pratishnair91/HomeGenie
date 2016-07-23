@@ -7,22 +7,37 @@ using System.Text;
 
 namespace HomeGenie.UI.ServiceClient
 {
-    public class WebApiClient
+    public abstract class WebApiClient : IWebApiClient
     {
-        private string _wepApiUrl= "http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&explaintext=1&titles=Mango";
-
-        private HttpWebRequest _request;
 
 
-        public void Init(string contentType, string requestMethod)
+
+
+        public HttpWebRequest _request { get; set; }
+
+        public HttpWebResponse _reponse { get; set; }
+
+
+
+        public virtual string UrlString
         {
-            _request = HttpWebRequest.Create(_wepApiUrl) as HttpWebRequest;
+            get
+            {
+                return null;
+            }
+        }
+
+        public virtual void Init(string contentType, string requestMethod)
+        {
+            _request = HttpWebRequest.Create(UrlString) as HttpWebRequest;
             _request.ContentType = contentType;
             _request.Method = requestMethod;
         }
 
+        
 
-     
+
+
         public string Request()
         {
 
@@ -30,18 +45,18 @@ namespace HomeGenie.UI.ServiceClient
             using (HttpWebResponse response = _request.GetResponse() as HttpWebResponse)
             {
 
-                var statuscode=response.StatusCode;
+                var statuscode = response.StatusCode;
 
-                if (response.StatusCode== HttpStatusCode.OK)
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
                     Encoding encode = System.Text.Encoding.GetEncoding("utf-8");
                     // Pipes the stream to a higher level stream reader with the required encoding format. 
                     StreamReader readStream = new StreamReader(response.GetResponseStream(), encode);
 
-                    string _result=readStream.ReadToEnd();
+                    string _result = readStream.ReadToEnd();
                     return _result;
-                    
-                    
+
+
                 }
             }
             return string.Empty;

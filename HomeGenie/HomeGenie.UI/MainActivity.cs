@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace HomeGenie.UI
 {
-    [Activity(Label = "HomeGenie", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Welcome To HomeGenie", MainLauncher = true, Icon = "@drawable/HomeGenieLogo")]
     public class MainActivity : Activity
     {
         int count = 1;

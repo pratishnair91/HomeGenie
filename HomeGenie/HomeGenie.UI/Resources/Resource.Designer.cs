@@ -50,7 +50,10 @@ namespace HomeGenie.UI
 			public const int buttonshape = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int HomeGenieLogo = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int Icon = 2130837506;
 			
 			static Drawable()
 			{
@@ -66,22 +69,22 @@ namespace HomeGenie.UI
 		{
 			
 			// aapt resource value: 0x7f050002
-			public const int SomeText = 2131034114;
+			public const int TextView01 = 2131034114;
 			
 			// aapt resource value: 0x7f050003
-			public const int TextView01 = 2131034115;
-			
-			// aapt resource value: 0x7f050004
-			public const int allow = 2131034116;
+			public const int allow = 2131034115;
 			
 			// aapt resource value: 0x7f050001
 			public const int btnContinue = 2131034113;
 			
-			// aapt resource value: 0x7f050005
-			public const int deny = 2131034117;
-			
 			// aapt resource value: 0x7f050000
 			public const int relativeLayout1 = 2131034112;
+			
+			// aapt resource value: 0x7f050004
+			public const int video = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int videoView1 = 2131034117;
 			
 			// aapt resource value: 0x7f050006
 			public const int webView1 = 2131034118;
@@ -106,7 +109,10 @@ namespace HomeGenie.UI
 			public const int SecondLayout = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int web = 2130903042;
+			public const int video = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int web = 2130903043;
 			
 			static Layout()
 			{
