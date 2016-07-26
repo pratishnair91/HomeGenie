@@ -45,7 +45,7 @@ namespace HomeGenie.UI
                         this);
                 mediacontroller.SetAnchorView(view);
                 // Get the URL from String VideoURL
-                Android.Net.Uri video = Android.Net.Uri.Parse("http://prvnaimedia.streaming.mediaservices.windows.net/11109950-8da1-4555-bfaa-fbf2183c5198/50491138-5814-4bd7-a9fd-3bae77d8e031.ism/manifest(format=m3u8-aapl)"); ;
+                Android.Net.Uri video = Android.Net.Uri.Parse("http://prvnaimedia.streaming.mediaservices.windows.net/871990a3-e120-45ca-abb7-18b038dda933/7ad682f1-8792-43c0-9f35-75673ca40ca8.ism/manifest(format=m3u8-aapl)"); ;
                 view.SetMediaController(mediacontroller);
                 view.SetVideoURI(video);
 

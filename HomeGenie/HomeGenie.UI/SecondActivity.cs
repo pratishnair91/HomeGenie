@@ -23,9 +23,9 @@ namespace HomeGenie.UI
 
             // Create your application here
             SetContentView(Resource.Layout.SecondLayout);
-            Button videoStream = FindViewById<Button>(Resource.Id.allow);
-           
-            videoStream.Click += VideoStream_Click;
+            Button controlDevices = FindViewById<Button>(Resource.Id.allow);
+
+            controlDevices.Click += ControlDevices_Click;
 
             Button videoView = FindViewById<Button>(Resource.Id.video);
             videoView.Click += VideoView_Click;
@@ -33,14 +33,15 @@ namespace HomeGenie.UI
 
         private void VideoView_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(VideoActivity));
+            //StartActivity(typeof(VideoActivity));
+            StartActivity(typeof(WebViewActivity));
         }
 
        
 
-        private void VideoStream_Click(object sender, EventArgs e)
+        private void ControlDevices_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(WebViewActivity));
+            StartActivity(typeof(ControlDevices));
         }
     }
 }

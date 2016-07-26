@@ -32,6 +32,7 @@ namespace HomeGenie.UI.ServiceClient
             _request = HttpWebRequest.Create(UrlString) as HttpWebRequest;
             _request.ContentType = contentType;
             _request.Method = requestMethod;
+            _request.ContentLength = 1000;
         }
 
         
@@ -40,25 +41,34 @@ namespace HomeGenie.UI.ServiceClient
 
         public string Request()
         {
-
-
-            using (HttpWebResponse response = _request.GetResponse() as HttpWebResponse)
+            try
+            {
+                var client = new WebClient();
+                var content = client.DownloadString(this.UrlString);
+                //_request.
+            }
+            catch (Exception)
             {
 
-                var statuscode = response.StatusCode;
-
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    Encoding encode = System.Text.Encoding.GetEncoding("utf-8");
-                    // Pipes the stream to a higher level stream reader with the required encoding format. 
-                    StreamReader readStream = new StreamReader(response.GetResponseStream(), encode);
-
-                    string _result = readStream.ReadToEnd();
-                    return _result;
-
-
-                }
+               
             }
+            //using (HttpWebResponse response = _request.GetResponse() as HttpWebResponse)
+            //{
+
+            //    var statuscode = response.StatusCode;
+
+            //    if (response.StatusCode == HttpStatusCode.OK)
+            //    {
+            //        Encoding encode = System.Text.Encoding.GetEncoding("utf-8");
+            //        // Pipes the stream to a higher level stream reader with the required encoding format. 
+            //        StreamReader readStream = new StreamReader(response.GetResponseStream(), encode);
+
+            //        string _result = readStream.ReadToEnd();
+            //        return _result;
+
+
+            //    }
+            //}
             return string.Empty;
 
 

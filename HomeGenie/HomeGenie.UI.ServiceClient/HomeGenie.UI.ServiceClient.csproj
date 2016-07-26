@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AzureWebApiClient.cs" />
     <Compile Include="IWebApiClient.cs" />
     <Compile Include="WebApiClient.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

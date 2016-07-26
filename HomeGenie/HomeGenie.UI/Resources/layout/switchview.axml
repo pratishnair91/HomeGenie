@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="What do you want to do with the device?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text=" On"
+            android:id="@+id/radioButton1" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/radioButton2" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/btnToggle"
+        android:text="Switch (Bulb)"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:layout_width="270dp"
+        android:layout_centerInParent="true"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginRight="113.0dp" />
+
+
+    <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupAC1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text=" On"
+            android:id="@+id/radioButtonAC1" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/radioButtonAC2" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/btnToggleAC"
+        android:text="Switch (AC)"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:layout_width="270dp"
+        android:layout_centerInParent="true"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginRight="113.0dp" />
+ 
+    <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupTV1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text=" On"
+            android:id="@+id/radioButtonTV1" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/radioButtonTV2" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/btnToggleTV"
+        android:text="Switch (TV)"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:layout_width="270dp"
+        android:layout_centerInParent="true"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginRight="113.0dp" />
+
+<Button
+        android:id="@+id/btnAddMoreDevices"
+        android:text=" + Add More Devices"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:layout_width="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="60dp"
+        
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginRight="113.0dp" />
+</LinearLayout>
